@@ -25,6 +25,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('clients/list', [ClientController::class, 'list'])->name('clients.list');
+Route::get('clients/export', [ClientController::class, 'export'])->name('clients.export');
+
 Route::resource('clients', ClientController::class);
 Route::resource('providers', ProviderController::class);
 Route::resource('products', ProductController::class);
