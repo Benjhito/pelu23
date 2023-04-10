@@ -24,5 +24,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call(ClientSeeder::class);
         \App\Models\Client::factory(20)->create();
+
+        $this->call(ProviderSeeder::class);
+        \App\Models\Provider::factory(10)->create();
     }
 }
